@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+    @apply bg-color-primary;
+}
+/* Navigasi bar*/
+.nav{
+    @apply flex flex-row min-w-full justify-center gap-3 bg-color-secondary p-4 text-xl;
+}
+
+/* Navigasi Button */
+.nav-btn{ 
+    @apply w-full py-2  font-Pacifico flex flex-col items-center bg-black rounded-xl cursor-pointer; 
+}
+.nav-icon{
+    @apply text-font-primary;
+}
+.nav-title{
+    @apply text-font-secondary text-xs text-center;
+}

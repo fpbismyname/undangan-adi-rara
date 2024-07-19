@@ -17,7 +17,7 @@ export default {
     extend:{
       colors:{
         'font-white': '#FFFFFF',
-        'font-primary': '#BD7777',
+        'font-primary': '#FF9797',
         'font-secondary': '#BD7777',
         'color-primary' : '#2D2D2D',
         'color-secondary' : '#272727',

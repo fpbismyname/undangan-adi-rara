@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Images from "./assets/images";
+import Data from "./assets/data_undangan";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const App = () => {
+  //Store current page that choosen
   const [page, setPage] = useState("Home");
 
+  //Setup Navigation menu
   const toHome = () => {
     setPage("Home");
   };
@@ -21,6 +24,12 @@ const App = () => {
     setPage("BeriKado");
   };
 
+  //Fullscreen Onload page
+  useEffect(()=>{
+    window.addEventListener('click',()=>{
+      document.body.requestFullscreen();
+    })
+  },[])
   return (
     <>
       <Content page={page} />
@@ -110,9 +119,30 @@ const Home = () => {
       {/* End Frame */}
 
       {/* Content */}
-      <h1 className="titleHome">Undangan Pernikahan</h1>
-      <div>
-        <img src="" />
+      <div className="frameHome">
+        {/* Keterangan Surat */}
+        <h1 className="titleHome">Undangan Pernikahan</h1>
+        {/* Frame Nama Penganten*/}
+        <img
+          src={Images["ft-top"]}
+          className="absolute top-[15vh] w-80 left-1/2 translate-x-[-50%]"
+        />
+        {/* Nama penganten */}
+        <div className="titlePenganten">
+          <h1 className="text-4xl text-center">
+            {Data["p-laki"] + " & " + Data["p-wanita"]}
+          </h1>
+          <h2 className="text-font-secondary text-center mt-2">
+            {Data["date-nikah"]}
+          </h2>
+        </div>
+        {/* Penerima & Tombol buka undangan */}
+
+        {/* Frame Nama Penganten*/}
+        <img
+          src={Images["ft-bottom"]}
+          className="absolute top-[30vh] w-80 left-1/2 translate-x-[-50%]"
+        />
       </div>
       {/* End Content */}
     </>

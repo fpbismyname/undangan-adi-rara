@@ -25,3 +25,12 @@
 .titleHome{
     @apply font-bold font-Pacifico absolute top-[10vh] left-1/2 translate-y-[-50%] translate-x-[-50%] text-center text-font-primary;
 }
+.frameHome{
+    @apply font-Pacifico text-font-primary;
+}
+.titlePenganten{
+    @apply absolute left-1/2 translate-x-[-50%] top-[21vh];
+}
+.titlePenerima{
+    @apply font-Pacifico;
+}
